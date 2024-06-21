@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDRuletaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="Int32" />
+    <Property Name="htmlContent" Type="Int32" />
+    <Property Name="textColor" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="background" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BDRuletaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblItem" EntityType="Self.tblItem" />
+    <EntitySet Name="tblUsuario" EntityType="BDRuletaModel.tblUsuario" />
+  </EntityContainer>
+  <EntityType Name="tblUsuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="Pass" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

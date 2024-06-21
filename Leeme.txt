@@ -1,0 +1,7 @@
+Algunos ajuste de la aplicacion .NET Framework 4.8
+1-Model1.edmx Modificar la conexion con tu servidor local.
+2-Restaurar la Base de Datos BDRuleta20062024.bak
+3-Si se presenta este tipo de errores por ejemplo:
+   Solución al error «No se puede encontrar el archivo bin\roslyn\csc.exe»
+4-Puede ejecutar en su Consola de Administrador de paquete el siguiente codigo
+    PM> update-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform o PM> update-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
